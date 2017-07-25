@@ -1,5 +1,5 @@
 #!/bin/sh
-sed -i 's/enforcing/disabled/g' /etc/sysconfig/selinux
+sed -i 's/enforcing/disabled/g' /etc/selinux/config
 /etc/init.d/iptables stop
 sed -i 's/Port 22/Port 65422/g' /etc/ssh/sshd_config
 cd
