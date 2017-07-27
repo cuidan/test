@@ -2,3 +2,4 @@
 cd /mnt
 ls
 touch file
+meizuzhibo
