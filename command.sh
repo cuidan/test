@@ -1,2 +1,2 @@
 #!/usr/bin/sh
-touch /root/file{1..3}
+touch /file{1..3}
