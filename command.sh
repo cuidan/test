@@ -1,2 +1,2 @@
-#!/usr/bin/sh
-touch /file{1..3}
+#!/bin/sh
+echo "hello world hahah"
