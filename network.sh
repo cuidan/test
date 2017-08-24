@@ -1,4 +1,5 @@
 #!/bin/sh
+#this is ping wangluo
 for i in {1..10}
 do 
 	ping -c2 10.0.0.$i &> /dev/null 
