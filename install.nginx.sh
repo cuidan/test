@@ -13,4 +13,4 @@ cd /mnt/nginx-1.9.12 && ./configure \
 --group=nginx \
 --without-http_rewrite_module
 
-make && make install
+cd /mnt/ngin-1.9.12 && make && make install
