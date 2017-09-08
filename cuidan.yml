@@ -1,0 +1,17 @@
+- hosts: webserver
+  remote_user: root
+  tasks:
+	- name: change aliyun repo
+	  command: name={{ item }} 
+	 with_item:
+	 	- Centos-6.repo
+		- epel-6.repo
+	  command: 
+			wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+			wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-6.repo
+		
+        - name: start resdis
+`	  copy: src=
+	- name: check redis state
+	 service: name=redis state=started enabled=yes
+
