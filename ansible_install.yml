@@ -1,0 +1,21 @@
+- hosts:all
+    sudo: yes
+tasks:
+- name:install apache
+    yum: name={{ item }} state=present
+    with_items:
+    -  httpd
+    -  httpd-devel
+- name: cp  config file
+ copy:
+	src: "{{ item.src }}"
+	dest: "{{ dest.src }}"
+	owner: root
+	group: root
+	mode:0644
+with_items:
+	- { src: "/tmp/httpd.conf" dest: "/etc/httpd/conf/httpd.conf" }
+	- { src: "/tmp/httpd-vhosts.conf" dest: "/etc/httpd/conf/httpd-vhosts.conf" }
+- name: check apache state
+ service: name=httpd state=started enabled=yes 
+
